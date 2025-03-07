@@ -60,7 +60,23 @@ button:hover {
     background-color: #45a049;
 }
 
-.habits-container, .stats-container {
+#add-category-btn {
+    padding: 10px 15px;
+    background-color: #2196F3;
+}
+
+#add-category-btn:hover {
+    background-color: #0b7dda;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.habits-container, .stats-container, .category-stats-container {
     margin-bottom: 20px;
 }
 
@@ -89,9 +105,19 @@ button:hover {
     margin-bottom: 5px;
 }
 
-.habit-frequency {
+.habit-details {
+    display: flex;
+    gap: 10px;
     font-size: 0.8em;
     color: #666;
+}
+
+.habit-category {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
 }
 
 .habit-streak {
@@ -121,14 +147,111 @@ button:hover {
     background-color: #d32f2f;
 }
 
-.stats-container {
+.stats-container, .category-stats-container {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 5px;
 }
 
-#stats p {
+#stats p, #category-stats p {
     margin-bottom: 10px;
+}
+
+.category-stat {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Category colors */
+.category-health {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 5px solid #4CAF50;
+}
+
+.category-work {
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left: 5px solid #2196F3;
+}
+
+.category-personal {
+    background-color: rgba(156, 39, 176, 0.1);
+    border-left: 5px solid #9C27B0;
+}
+
+.category-learning {
+    background-color: rgba(255, 152, 0, 0.1);
+    border-left: 5px solid #FF9800;
+}
+
+.category-other {
+    background-color: rgba(158, 158, 158, 0.1);
+    border-left: 5px solid #9E9E9E;
+}
+
+/* Category badge colors */
+.badge-health {
+    background-color: #4CAF50;
+}
+
+.badge-work {
+    background-color: #2196F3;
+}
+
+.badge-personal {
+    background-color: #9C27B0;
+}
+
+.badge-learning {
+    background-color: #FF9800;
+}
+
+.badge-other {
+    background-color: #9E9E9E;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+#new-category-input {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#save-category-btn {
+    width: 100%;
 }
 
 @media (max-width: 600px) {

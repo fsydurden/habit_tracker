@@ -17,7 +17,29 @@
                 <option value="weekly">Weekly</option>
                 <option value="monthly">Monthly</option>
             </select>
+            <select id="habit-category">
+                <option value="">Select Category</option>
+                <option value="health">Health</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="learning">Learning</option>
+                <option value="other">Other</option>
+            </select>
+            <button id="add-category-btn">+</button>
             <button id="add-habit-btn">Add Habit</button>
+        </div>
+        
+        <!-- Category Filter -->
+        <div class="filter-container">
+            <label for="category-filter">Filter by category:</label>
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="health">Health</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="learning">Learning</option>
+                <option value="other">Other</option>
+            </select>
         </div>
         
         <div class="habits-container">
@@ -28,12 +50,29 @@
         </div>
         
         <div class="stats-container">
-            <h2>Statistics</h2>
+            <h2>Overall Statistics</h2>
             <div id="stats">
                 <p>Total habits: <span id="total-habits">0</span></p>
                 <p>Completed today: <span id="completed-today">0</span></p>
                 <p>Completion rate: <span id="completion-rate">0%</span></p>
             </div>
+        </div>
+        
+        <div class="category-stats-container">
+            <h2>Category Statistics</h2>
+            <div id="category-stats">
+                <!-- Category stats will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding new category -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Category</h2>
+            <input type="text" id="new-category-input" placeholder="Enter category name">
+            <button id="save-category-btn">Save</button>
         </div>
     </div>
 
